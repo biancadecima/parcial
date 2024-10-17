@@ -1,0 +1,12 @@
+<div *ngIf="choferDetalle == undefined" class="d-flex justify-content-center">
+    <h4>No seleccionó ningun chofer!</h4>
+  </div>
+  <div *ngIf="choferDetalle != undefined">
+    <p>Nombre: {{choferDetalle.nombre}}</p>
+    <p>DNI: {{choferDetalle.dni}}</p>
+    <p>Edad: {{choferDetalle.edad}}</p>
+    <p>Numero de licewncia: {{choferDetalle.nroLicencia}}</p>
+    <p *ngIf="choferDetalle.licenciaProfesional == 'true'">Licencia Profesional: Si</p>
+    <p *ngIf="choferDetalle.licenciaProfesional == 'false'">Licencia Profesional: No</p>
+    <p>Pais de Origen: {{choferDetalle.nacionalidad}}</p>
+  </div>

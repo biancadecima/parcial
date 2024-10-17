@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/bienvenido', pathMatch: "full" },
@@ -7,6 +8,10 @@ export const routes: Routes = [
     { path: 'login', 
         loadComponent:()=> import('./components/login/login.component').then(c =>c.LoginComponent)},
     { path: 'alta-chofer', 
-        loadComponent:()=> import('./components/alta-chofer/alta-chofer.component').then(c =>c.AltaChoferComponent)}    
+        loadComponent:()=> import('./components/alta-chofer/alta-chofer.component').then(c =>c.AltaChoferComponent)},
+    { path: 'choferes', 
+        loadComponent:()=> import('./components/choferes/choferes.component').then(c =>c.ChoferesComponent),
+        canActivate: [authGuard],
+    }      
        
 ];

@@ -1,0 +1,4 @@
+<div *ngIf="countryDetails">
+    <h3>Detalles del País: {{ countryDetails.name.common }}</h3>
+    <img [src]="countryDetails.flags.svg" alt="{{ countryDetails.name.common }} flag" width="100px">
+  </div>

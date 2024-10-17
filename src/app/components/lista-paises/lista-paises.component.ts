@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
   templateUrl: './lista-paises.component.html',
   styleUrl: './lista-paises.component.css'
 })
-export class ListaPaisesComponent {
+export class ListaPaisesComponent implements OnInit{
   countries: any[] = [];
   @Output() selectedCountry = new EventEmitter<string>();
 
@@ -23,6 +23,7 @@ export class ListaPaisesComponent {
 
   ngOnInit() {
     this.apiService.getCountries().subscribe((countriesList: any) => {
+      console.log(countriesList);
       countriesList.forEach((auxCountry: any) => {
         const country = {
           nombre: auxCountry.name.common,
@@ -36,7 +37,7 @@ export class ListaPaisesComponent {
 
   getAllCountryData() {
     const selectedCountries = ['Estados Unidos', 'Francia', 'Albania', 'Bélgica', 'México', 'Canadá', 'Alemania', ];
-    this.countries = this.countries.filter(country => selectedCountries.includes(country.name));
+    this.countries = this.countries.filter(country => selectedCountries.includes(country.nombre));
   }
 
   selectCountry(countryName: string) {

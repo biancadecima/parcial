@@ -1,0 +1,40 @@
+<body>
+    <main>
+      <div class="container py-4">
+        <header class="pb-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+            <span class="fs-4">Chofer Detalle</span>
+          </a>
+        </header>
+  
+        <div class="p-3 mb-4 bg-body-tertiary rounded-3">
+          <div class="container-fluid py-2">
+            <h1 class="d-flex justify-content-center border-bottom">Tabla de Repartidores</h1>
+            <div class="tabla">
+            <app-tabla-choferes (choferElegido)="choferSeleccionado($event)"></app-tabla-choferes>
+
+            </div>
+          </div>
+        </div>
+  
+        <div class="row align-items-md-stretch">
+  
+          <div class="col-md-6">
+            <div class="p-5 text-bg-dark rounded-3">
+              <h1>Detalles del chofer</h1>
+              <app-detalle-choferes [choferDetalle]="chofer"></app-detalle-choferes>
+            </div>
+          </div>
+  
+          <div class="col-md-6">
+            <div class="p-5 bg-body-tertiary border rounded-3">
+              <h1>Informacion del país</h1>
+              <app-detalle-pais [country]="pais"></app-detalle-pais>
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+    </main>
+  </body>
