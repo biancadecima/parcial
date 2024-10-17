@@ -1,0 +1,11 @@
+<div class="mt-5 shadow p-3 text-bg-secondary bg-opacity-50 rounded ">
+    <div class="overflow-auto border border-4 " style="height: 500px;">
+        <div *ngFor="let country of countries">
+            <ul class="list-group">
+            <li class="list-group-item" (click)="selectCountry(country.nombre)">
+            {{country.nombre}} - <img src="{{country.bandera}}" height="100px">  
+            </li>
+            </ul>
+        </div>
+    </div>
+</div>

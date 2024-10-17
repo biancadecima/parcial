@@ -1,0 +1,22 @@
+<body class="vh-100 gradient-custom">
+	<div class="container" id="container">
+		<div class="form-container sign-in-container">
+			<form action="#">
+				<h1>Iniciar sesión</h1>
+				<input [(ngModel)]="email" name="email" placeholder="Email" />
+			    <input [(ngModel)]="password" name="password" placeholder="Password" />
+				
+				<button class="btn-rellenar" (click)="Rellenar('admin@admin.com', '12345678')">Admin</button>
+                <button class="btn-rellenar" (click)="Rellenar('empleado@empleado.com', '12345678')">Empleado</button>
+				<button (click) ="LogIn()">Iniciar sesión</button>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-right">
+					<h1>Hola, amiguito!</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>

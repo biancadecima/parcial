@@ -1,0 +1,9 @@
+.central{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    padding-top: 56px; /* Ajusta según la altura de tu navbar */
+  }

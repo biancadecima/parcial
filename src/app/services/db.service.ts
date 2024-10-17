@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ICollection } from '../interfaces/icollection';
 import { 
-  Firestore, 
+  //sFirestore, 
   collection, 
   doc, 
   setDoc, 
@@ -13,7 +13,7 @@ import {
   where,
   getDocs
 } from 'firebase/firestore';
-
+import { Firestore } from '@angular/fire/firestore';
 @Injectable({
   providedIn: 'root'
 })
